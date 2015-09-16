@@ -1,0 +1,450 @@
+@import "neutron/neutron";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font: {
+		size: 16px;
+	}
+	background: $background;
+	max-width: 100%;
+	
+	@media #{$from-phablet} {
+		font: {
+			size: 20px;
+		}
+	}
+}
+
+#introLogo {
+	margin: {
+		top: -10px;
+		bottom: 20px;
+	}
+	width: 100px;
+	height: 100px;
+	background: url(../img/logo.svg) no-repeat;
+	background-size: contain;
+	display: inline-block;
+	
+	@media #{$from-phablet} {
+		width: 150px;
+		height: 150px;
+	}
+	
+	@media #{$from-tablet} {
+		margin: {
+			top: 0px;
+			bottom: 45px;
+		}
+		width: 250px;
+		height: 250px;
+	}
+}
+
+h2 {
+	font: {
+		size: 1.9em;
+		family: "Dosis", helvetica, arial, sans-serif;
+		weight: 300;
+	}
+	line-height: 1.3em;
+	letter-spacing: -0.59px;
+	color: $primary;
+}
+
+p {
+	font: {
+		size: 1em;
+		family: "Open Sans", helvetica, arial, sans-serif;
+		weight: 300;
+	}
+	line-height: 1.3em;
+	letter-spacing: -0.46px;
+}
+
+.code {
+	display: block;
+	background: none;
+	border: none;
+	font: {
+		size: 1em;
+		family: "fira mono", monaco;
+	}
+	
+	span {
+		color: $accent1;
+	}
+}
+
+a {
+	text: {
+		decoration: none;
+	}
+	font: {
+		size: 1em;
+		family: "Open Sans", helvetica, arial, sans-serif;
+		weight: 300;
+	}
+	
+	&:hover {
+		text: {
+			decoration: underline;
+		}
+		color: $primary;
+	}
+}
+
+.btn {
+	padding: 15px 70px;
+	background: $primary;
+	color: $background;
+	border-radius: 8px;
+	text: {
+		decoration: none;
+	}
+	font: {
+		size: 1.24em;
+		family: "Dosis", helvetica, arial, sans-serif;
+		weight: 600;
+	}
+	display: block;
+	box-shadow: none;
+	border: 1px solid $primary;
+	transition: 0.2s box-shadow ease, 0.2s color ease, 0.2s border ease;
+	
+	&:hover {
+		box-shadow: 0px 4px 3px rgba(black,0.5);
+		border: 1px solid rgba(white,0.5);
+		color: black;
+		text: {
+			decoration: none;
+		}
+		transition: 0.5s box-shadow ease, 0.5s color ease, 0.5s border ease;
+	}
+	
+	@media #{$from-tablet} {
+		display: inline;
+	}
+	
+}
+
+.copyIntro {
+	font: {
+		size: 1.1em;
+		family: "Open Sans", helvetica, arial, sans-serif;
+		weight: 300;
+	}
+	text: {
+		align: center;
+	}
+	line-height: 1.5em;
+	letter-spacing: -0.46px;
+	padding: {
+		bottom: 30px;
+	}
+	
+	@media #{$from-phablet} {
+		font: {
+			size: 1em;
+		}
+	}
+	
+	@media #{$from-tablet} {
+		font: {
+			size: 1.55em;
+		}
+	}
+}
+
+.docsLink {
+	display: block;
+	margin: {
+		bottom: 30px;
+		top: -10px;
+	}
+	
+	@media #{$from-tablet} {
+		margin: {
+			top: 30px;
+		}
+	}
+	
+}
+
+hr {
+	margin: {
+		bottom: 30px;
+	}
+	border: 1px solid rgba($secondary, 0.1);
+	border-bottom: 0px;
+	
+	@media #{$from-tablet} {
+		margin: {
+			top: 40px;
+		}
+	}
+	
+}
+
+.indent0 {
+	font: {
+		family: "fira mono", monaco;
+		size: 0.8em;
+	}
+	
+	i {
+		color: $accent1;
+		font: {
+			style: normal;
+		}
+	}
+}
+
+
+.indent1 {
+	margin-left: 30px;
+	font: {
+		family: "fira mono", monaco;
+		size: 0.8em;
+	}
+	
+	i {
+		color: $accent1;
+		font: {
+			style: normal;
+		}
+	}
+}
+
+.indent2 {
+	margin-left: 60px;
+	font: {
+		family: "fira mono", monaco;
+		size: 0.8em;
+	}
+	
+	i {
+		color: $accent1;
+		font: {
+			style: normal;
+		}
+	}
+}
+
+.indent3 {
+	margin-left: 90px;
+	font: {
+		family: "fira mono", monaco;
+		size: 0.8em;
+	}
+	
+	i {
+		color: $accent1;
+		font: {
+			style: normal;
+		}
+	}
+}
+
+
+.infoBlock {
+	padding: 40px 20px;
+	
+	@media #{$from-tablet} {
+		padding: 100px;
+	}
+}
+
+@-webkit-keyframes slide {
+	from { background-position: left 100%; }
+	to { background-position: left 0%; }
+}
+
+
+header {
+	background: #1D2C2F;
+	background-image: linear-gradient(-134deg, rgba(#FFCE55,0.1) 0%, rgba(#4DF1FF,0.1) 100%);
+	z-index: 1;
+	position: relative;
+}
+
+.pattern {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/pattern.svg);
+	position: absolute;
+	top: 0px;
+	-webkit-animation: slide 50s linear infinite;
+	opacity: 0.05;
+}
+
+
+#intro {
+	@include columns($container-width: 1000px, $target: span);
+	text: {
+		align: center;
+	}
+}
+
+#flexibility {
+	@include columns(6, $margin: 2px, $target: span);
+	background: rgba(black, 0.02);
+	
+	& > span {
+		background: rgba($accent1,0.1);
+		height: 60px;
+		border: 1px solid rgba($accent1,0.5);
+		color: $accent1;
+	}
+	
+	@media #{$from-tablet} {
+		@include columns(6, $margin: 10px, $target: span);
+		
+		& > span {
+			height: 120px;
+			border-radius: 5px;
+		}
+	}
+}
+
+#compare {
+	@include columns(1, $target: ".codeblock");
+	background: #1D2D2F;
+	position: relative;
+	
+	.topRight {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		right: 0px;
+		top: -30px;
+		
+		img {
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+		}
+	}
+	
+	.topLeft {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		
+		img {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+		}
+	}
+	
+	.bottomLeft {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		left: 0px;
+		bottom: -30px;
+		
+		img {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+		}
+	}
+	
+	.bottomRight {
+		width: 50%;
+		height: 30px;
+		position: absolute;
+		right: 0px;
+		bottom: 0px;
+		
+		img {
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+		}
+	}
+	
+	h3 {
+		color: $primary;
+		font: {
+			size: 1.4em;
+			family: "Dosis", helvetica, arial, sans-serif;
+			weight: 300;
+		}
+		float: left;
+		display: block;
+		opacity: 0.5;
+		margin: {
+			right: 40px;
+		}
+		
+		&[data-tabs*=".tab."] {
+			cursor: pointer;
+		}
+		
+		&[data-tabs$=".active"] {
+			opacity: 1; 
+			font: {
+				weight: 500;
+			}
+		}
+	}
+	
+	hr {
+		margin: {
+			top: 50px;
+			bottom: 35px;
+		}
+	}
+		
+	@media #{$from-tablet} {
+		@include columns(2, $margin: 40px 10px, $target: ".codeblock");
+		
+		span:last-child {
+			@include columns(1, $target: div);
+			
+			@media #{$from-tablet} {
+				@include columns(2, $target: div, $margin: 0px -5px);
+			}
+		}
+	}
+}
+
+#powerful {
+	@include columns(5, $order:(5,4,1,3,2), $margin: 2px, $target: span);
+	background: rgba(black, 0.02);
+	
+	& > span {
+		background: rgba($accent1,0.1);
+		line-height: 60px;
+		border: 1px solid rgba($accent1,0.5);
+		color: $accent1;
+		text: {
+			align: center;
+		}
+		font: {
+			size: 2em;
+			family: "Dosis", helvetica, arial, sans-serif;
+			weight: 400;
+		}
+	}
+	
+	@media #{$from-tablet} {
+		@include columns(5, $order:(5,4,1,3,2), $margin: 10px, $target: span);
+		
+		& > span {
+			line-height: 120px;
+			border-radius: 5px;
+			font: {
+				size: 4.05em;
+			}
+		}
+	}
+}

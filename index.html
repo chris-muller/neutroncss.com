@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Neutron</title>
+		<link rel="stylesheet" href="./assets/css/stylish.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Dosis:300,400,600|Fira+Mono' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+		<link href="./apple-touch-icon.png" rel="apple-touch-icon">
+		<link rel="shortcut icon" href="./assets/img/pinned.svg" type="image/x-icon" />
+		<link rel="mask-icon" href="./assets/img/pinned.svg" color="#29383A">
+		<meta name="theme-color" content="#29383A">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			$(function() {//Page ready
+				neutron.tab.init("frameworks");
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<section id="intro" class="infoBlock">
+				<div id="introLogo"></div>
+				<p class="copyIntro">A SASS framework that empowers you to create flexible, clear, and semantic website layouts.</p>
+				<a href="#" class="btn">Download</a>
+				<br />
+				<a href="#" class="docsLink">read the documentation</a>
+<!--
+				<hr />
+				<p>Neutron is a CSS/SASS framework built from the beginning to be a clear, concise, and primarily flexible system for creating website layouts. When building it we did away with redundant concepts and ideas that many frameworks still use, such as littering your HTML with classes, or manually declaring each column, or being restricted to a specific grid layout.</p>
+-->
+			</section>
+			<div class="pattern"></div>
+		</header>
+		<section id="flexibility" class="infoBlock">
+			<h2>Flexible layouts, done your way</h2>
+			<p>Neutron does more than just let you build your layout quickly, it lets you maintain your work or change direction entirely with much less effort than other frameworks require. This flexibility lets you iterate faster and easier, your code can now keep up with the design changes that happen through the life of a project.</p>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<p class="code">@include columns(<span>6</span>);</p>
+		</section>
+		<section id="compare" class="infoBlock">
+			<div class="topRight">
+				<img src="assets/img/triangleTopRight.svg" />
+			</div>
+			<div class="topLeft">
+				<img src="assets/img/traingleTopLeft.svg" />
+			</div>
+			<div class="bottomRight">
+				<img src="assets/img/triangleBottomRight.svg" />
+			</div>
+			<div class="bottomLeft">
+				<img src="assets/img/triangleBottomLeft.svg" />
+			</div>
+			<h2>Clear, clean, and semantic</h2>
+			<p>Neutron removes the need to litter your HTML with messy and confusing classes, leaving you with clear and clean code. Want to change the number of columns? No need to change classes scattered throughout your HTML, the number of columns is determined in your CSS right where it belongs.</p>
+			<span class="codeblock">
+				<h3 data-tabs="frameworks.tab.bootstrap">Bootstrap</h3>
+				<h3 data-tabs="frameworks.tab.skeleton.active">Skeleton</h3>
+				<h3 data-tabs="frameworks.tab.foundation">Foundation</h3>
+				<hr />
+				<div data-tabs="frameworks.page.bootstrap">
+					<p class="indent0">&lt;div <i>class="container bootstrap"</i>></p>
+						<p class="indent1">&lt;div <i>class="row"</i>></p>
+							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
+								<p class="indent3">&lt;h1>Hello&lt;/h1></p>
+							<p class="indent2">&lt;/div></p>
+							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
+								<p class="indent3">&lt;h1>World&lt;/h1></p>
+							<p class="indent2">&lt;/div></p>
+						<p class="indent1">&lt;/div></p>
+					<p class="indent0">&lt;/div></p>
+				</div>
+				<div data-tabs="frameworks.page.skeleton">
+					<p class="indent0">&lt;div <i>class="container skeleton"</i>></p>
+						<p class="indent1">&lt;div <i>class="row"</i>></p>
+							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
+								<p class="indent3">&lt;h1>Hello&lt;/h1></p>
+							<p class="indent2">&lt;/div></p>
+							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
+								<p class="indent3">&lt;h1>World&lt;/h1></p>
+							<p class="indent2">&lt;/div></p>
+						<p class="indent1">&lt;/div></p>
+					<p class="indent0">&lt;/div></p>
+				</div>
+				<div data-tabs="frameworks.page.foundation">
+					<p class="indent0">&lt;div <i>class="container foundation"</i>></p>
+						<p class="indent1">&lt;div <i>class="row"</i>></p>
+							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
+								<p class="indent3">&lt;h1>Hello&lt;/h1></p>
+							<p class="indent2">&lt;/div></p>
+							<p class="indent2">&lt;div <i>class="col-xs-12 col-md-6"</i>></p>
+								<p class="indent3">&lt;h1>World&lt;/h1></p>
+							<p class="indent2">&lt;/div></p>
+						<p class="indent1">&lt;/div></p>
+					<p class="indent0">&lt;/div></p>
+				</div>
+			</span>
+			
+			<span class="codeblock">
+				<h3 class="active">Neutron</h3>
+				<hr />
+				<div>
+					<p class="indent0">&lt;section></p>
+						<p class="indent1">&lt;div></p>
+							<p class="indent2">&lt;h1>Hello&lt;/h1></p>
+						<p class="indent1">&lt;/div></p>
+						<p class="indent1">&lt;div></p>
+							<p class="indent2">&lt;h1>World&lt;/h1></p>
+						<p class="indent1">&lt;/div></p>
+					<p class="indent0">&lt;/section></p>
+				</div>
+				<div>
+					<p class="indent0">section {</p>
+						<p class="indent1">columns(<i>1</i>)</p>
+						<p class="indent1">@media {#<i>$from-tablet</i>} {</p>
+							<p class="indent2">columns(<i>2</i>)</p>
+						<p class="indent1">}</p>
+					<p class="indent0">}</p>
+				</div>
+			</span>
+		
+		</section>
+		<section id="powerful" class="infoBlock">
+			<h2>Powerful features, simple syntax</h2>
+			<p>Rethinking Neutron to work the way you think helped us make Neutron more powerful, not just easier to use. Instead of pushing or pulling elements to fit into your design, you can simply use <code>order()</code> and make your design match the way you imagined it. Because Neutron makes no unnecessary assumptions about how you work, we were able to add essential features like real flush margins that other frameworks have to fake or simulate or not support at all.</p>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<p class="code">@include columns(<span>5</span>, $order:(<span>5,4,1,3,2</span>));</p>
+		</section>
+
+		<script src="./assets/js/app.js"></script>
+	</body>
+</html>
