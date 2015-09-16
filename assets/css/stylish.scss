@@ -389,10 +389,12 @@ header {
 			cursor: pointer;
 		}
 		
-		&[data-tabs$=".active"] {
+		&[data-tabs$=".active"],
+		&.active {
 			opacity: 1; 
 			font: {
 				weight: 500;
+				
 			}
 		}
 	}

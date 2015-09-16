@@ -861,7 +861,7 @@ header {
 #compare h3[data-tabs*=".tab."] {
   cursor: pointer;
 }
-#compare h3[data-tabs$=".active"] {
+#compare h3[data-tabs$=".active"], #compare h3.active {
   opacity: 1;
   font-weight: 500;
 }
