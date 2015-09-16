@@ -5,7 +5,7 @@ var sass = require('gulp-ruby-sass');
 gulp.task('sass', function() {
     return sass('./assets/**/*.scss', {style: 'expanded'})
 	.on('error', sass.logError)
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('assets'));
 });
 
 //SASS Watch task
