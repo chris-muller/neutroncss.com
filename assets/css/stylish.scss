@@ -69,6 +69,7 @@ p {
 	display: block;
 	background: none;
 	border: none;
+	clear: left;
 	font: {
 		size: 1em;
 		family: "fira mono", monaco;
@@ -292,6 +293,7 @@ header {
 #flexibility {
 	@include columns(6, $margin: 2px, $target: span);
 	background: rgba(black, 0.02);
+	height: 140px;
 	
 	& > span {
 		background: rgba($accent1,0.1);
@@ -308,6 +310,16 @@ header {
 			border-radius: 5px;
 		}
 	}
+}
+
+#column-input {
+	width: 30px;
+	background: none;
+	border: none;
+	-webkit-appearance: none;
+	appearance: none;
+	text-align: center;
+	padding: 0;
 }
 
 #compare {

@@ -1,8 +1,7 @@
-'use strict';
-
 var neutron = neutron || {};
 
 neutron.tab = (function () {
+	'use strict';
 
 	// locally scoped Object
 	var tab = {};
@@ -19,6 +18,7 @@ neutron.tab = (function () {
 			
 		for (i = 0; i < elements.length; ++i) {
 			var element = elements[i];
+
 
 			var attribute = element.getAttribute("data-tabs");
 			
@@ -70,15 +70,14 @@ neutron.tab = (function () {
 	
 	var setOnClickEvents = function(elements) {
 
-		var i;
-		for (i = 0; i < elements.length; ++i) {
+		for (var i = 0; i < elements.length; ++i) {
 			var element = elements[i];
 
 			var attribute = element.getAttribute("data-tabs");
 			var attributeType = attribute.split('.')[1];
 
 			if(attributeType === 'tab') {
-				neutron.listener.add(element, 'click', changeActiveTab);
+				element.addEventListener('click', changeActiveTab, false);
 			}
 		}	
 	}

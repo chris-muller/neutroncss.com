@@ -13,6 +13,7 @@
 		<script>
 			$(function() {//Page ready
 				neutron.tab.init("frameworks");
+				neutron.column.init();
 			});
 		</script>
 	</head>
@@ -24,26 +25,24 @@
 				<a href="#" class="btn">Download</a>
 				<br />
 				<a href="#" class="docsLink">read the documentation</a>
-<!--
-				<hr />
-				<p>Neutron is a CSS/SASS framework built from the beginning to be a clear, concise, and primarily flexible system for creating website layouts. When building it we did away with redundant concepts and ideas that many frameworks still use, such as littering your HTML with classes, or manually declaring each column, or being restricted to a specific grid layout.</p>
--->
+
 			</section>
 			<div class="pattern"></div>
 		</header>
-		<section id="flexibility" class="infoBlock">
+		<section class="infoBlock">
 			<h2>Flexible layouts, done your way</h2>
 			<p>Neutron does more than just let you build your layout quickly, it lets you maintain your work or change direction entirely with much less effort than other frameworks require. This flexibility lets you iterate faster and easier, your code can now keep up with the design changes that happen through the life of a project.</p>
-			<div data-columns="flexibility.row">
-				<span data-columns="flexibility.col"></span>
-				<span data-columns="flexibility.col"></span>
-				<span data-columns="flexibility.col"></span>
-				<span data-columns="flexibility.col"></span>
-				<span data-columns="flexibility.col"></span>
-				<span data-columns="flexibility.col"></span>
+			<div id="flexibility">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 
-			<p class="code">@include columns(<span data-columns="flexibility.input" contenteditable="true">6</span>);</p>
+			<p class="code">@include columns(<input type="text" pattern="\d{1,2}" id="column-input" value="6">);</p>
+			
 		</section>
 		<section id="compare" class="infoBlock">
 			<div class="topRight">
